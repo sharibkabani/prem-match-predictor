@@ -6,7 +6,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 file_path = 'premier-league-matches.csv'
 data = pd.read_csv(file_path)
-LINE = "-----------------------------------"
 
 def preprocess_data(data):
     data['Result'] = data['FTR'].map({'H': 1, 'D': 0, 'A': -1})
